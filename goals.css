@@ -1,0 +1,224 @@
+/* Goals Specific CSS */
+
+.goals-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Goals Controls */
+.goals-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-pills {
+    display: flex;
+    gap: 16px;
+}
+
+.filter-pill {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 10px 24px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-pill:hover {
+    background: var(--bg-card-hover);
+}
+
+.filter-pill.active {
+    background: var(--color-purple);
+    border-color: var(--color-purple);
+    color: white;
+}
+
+/* Goals List */
+.goals-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Goal Card */
+.goal-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.goal-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.goal-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+}
+
+/* Icon Colors */
+.icon-purple {
+    border-color: rgba(92, 63, 246, 0.3);
+    color: var(--color-purple);
+}
+.icon-green {
+    border-color: rgba(16, 185, 129, 0.3);
+    color: var(--color-green);
+}
+.icon-orange {
+    border-color: rgba(245, 158, 11, 0.3);
+    color: var(--color-orange);
+}
+.icon-purple-2 {
+    border-color: rgba(165, 148, 249, 0.3);
+    color: #a594f9;
+}
+
+.goal-info h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-primary);
+}
+
+.goal-info p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.goal-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.status-badge {
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.status-active {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--color-green);
+}
+
+.status-active-red {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--color-red);
+}
+
+.menu-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu-btn:hover {
+    background: var(--bg-card-hover);
+}
+
+/* Goal Progress */
+.goal-progress {
+    margin: 24px 0;
+}
+
+.progress-track {
+    width: 100%;
+    height: 12px;
+    background: #1a1d36;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 6px;
+}
+
+.fill-purple { background: var(--color-purple); }
+.fill-green { background: var(--color-green); }
+.fill-orange { background: var(--color-orange); }
+.fill-red { background: var(--color-red); }
+
+/* Goal Footer */
+.goal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.goal-date {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.category-badge {
+    background: rgba(92, 63, 246, 0.1);
+    color: #a594f9;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .goals-controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .filter-pills {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 8px;
+    }
+    
+    .goal-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .goal-actions {
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 12px;
+    }
+    
+    .goal-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
